@@ -548,7 +548,7 @@
         <!-- Cast Member 1 -->
         <div class="col-6 col-md-4 col-lg-3">
           <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
-            <img src="/actor/e.jpeg" alt="John Doe" class="cast-image rounded-circle mb-3">
+            <img src="/asset/actor/e.jpeg" alt="John Doe" class="cast-image rounded-circle mb-3">
             <h5 class="cast-name mb-1">John Doe</h5>
             <p class="cast-role text-muted small">Lead Actor</p>
           </div>
@@ -556,7 +556,7 @@
         <!-- Cast Member 2 -->
         <div class="col-6 col-md-4 col-lg-3">
           <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
-            <img src="/actor/Gemini_Generated_Image_g9xxocg9xxocg9xx.jpeg" alt="Jane Smith" class="cast-image rounded-circle mb-3">
+            <img src="/asset/actor/blue female.jpeg" alt="Jane Smith" class="cast-image rounded-circle mb-3">
             <h5 class="cast-name mb-1">Jane Smith</h5>
             <p class="cast-role text-muted small">Lead Actress</p>
           </div>
@@ -564,7 +564,7 @@
         <!-- Cast Member 3 -->
         <div class="col-6 col-md-4 col-lg-3">
           <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
-            <img src="/actor/Gemini_Generated_Image_kwvxlskwvxlskwvx.jpeg" alt="Michael Ray" class="cast-image rounded-circle mb-3">
+            <img src="/asset/actor/Gemini_ female black.jpeg" alt="Michael Ray" class="cast-image rounded-circle mb-3">
             <h5 class="cast-name mb-1">Michael Ray</h5>
             <p class="cast-role text-muted small">Supporting Actor</p>
           </div>
@@ -572,7 +572,7 @@
         <!-- Cast Member 4 -->
         <div class="col-6 col-md-4 col-lg-3">
           <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
-            <img src="/actor/Gemini_Generated_Image_l5sjczl5sjczl5sj.jpeg" alt="Sara Lane" class="cast-image rounded-circle mb-3">
+            <img src="/asset/actor/m.jpeg" alt="Sara Lane" class="cast-image rounded-circle mb-3">
             <h5 class="cast-name mb-1">Sara Lane</h5>
             <p class="cast-role text-muted small">Supporting Actress</p>
           </div>
@@ -751,7 +751,7 @@
             <div class="row g-0">
               <div class="col-md-4">
                 <div class="news-image-wrapper">
-                  <img src="/actor/news1.jpg" alt="News Image">
+                  <img src="/asset/news-image/news-2.jpeg" alt="News Image">
                   <div class="news-badge">Breaking</div>
                 </div>
               </div>
@@ -783,7 +783,7 @@
             <div class="row g-0">
               <div class="col-md-4">
                 <div class="news-image-wrapper">
-                  <img src="/actor/news2.jpg" alt="News Image">
+                  <img src="/asset/news-image/news-1.jpeg" alt="News Image">
                   <div class="news-badge">Exclusive</div>
                 </div>
               </div>
@@ -825,7 +825,7 @@
 
   <!-- ----------------{ FOOTER SECTION }------------------------------- -->
   <footer class="footer border-top">
-    <div class="container " data-aos="fade-up">
+    <div class="container " >
       <div class="row gy-4">
         <div class="col-md-3">
           <div class="logo">MOVIE 90</div>
@@ -958,6 +958,165 @@
       });
     }
   </script>
+
+    <!-- -------------------------[ director section script (show more) ] ------------------- -->
+    
+
+    <script>
+      document.getElementById("showMoreDirectorsBtn").addEventListener("click", function () {
+        const directorContainer = document.getElementById("directorContainer");
+        
+        // Additional director cards data
+        const newDirectors = `
+          <!-- Director Card 3 -->
+          <div class="col-md-6" data-category="action" data-aos="fade-up">
+            <div class="director-card">
+              <div class="director-card-inner">
+                <div class="director-image">
+                  <img src="/director/director3.jpg" alt="James Cameron">
+                  <div class="director-overlay"></div>
+                </div>
+                <div class="director-info">
+                  <h3 class="director-name">
+                    <a href="director.html?name=JamesCameron">James Cameron</a>
+                  </h3>
+                  <div class="director-stats">
+                    <span><i class="bi bi-film"></i> 15 Films</span>
+                    <span><i class="bi bi-star-fill"></i> 4.8</span>
+                  </div>
+                  <p class="director-movies">Notable Works: Avatar, Titanic, Terminator</p>
+                  <div class="director-genres">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">Sci-Fi</span>
+                    <span class="genre-tag">Drama</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Director Card 4 -->
+          <div class="col-md-6" data-category="drama" data-aos="fade-up">
+            <div class="director-card">
+              <div class="director-card-inner">
+                <div class="director-image">
+                  <img src="/director/director4.jpg" alt="Martin Scorsese">
+                  <div class="director-overlay"></div>
+                </div>
+                <div class="director-info">
+                  <h3 class="director-name">
+                    <a href="director.html?name=MartinScorsese">Martin Scorsese</a>
+                  </h3>
+                  <div class="director-stats">
+                    <span><i class="bi bi-film"></i> 25 Films</span>
+                    <span><i class="bi bi-star-fill"></i> 4.9</span>
+                  </div>
+                  <p class="director-movies">Notable Works: The Departed, Goodfellas, Taxi Driver</p>
+                  <div class="director-genres">
+                    <span class="genre-tag">Drama</span>
+                    <span class="genre-tag">Crime</span>
+                    <span class="genre-tag">Thriller</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Director Card 5 -->
+          <div class="col-md-6" data-category="scifi" data-aos="fade-up">
+            <div class="director-card">
+              <div class="director-card-inner">
+                <div class="director-image">
+                  <img src="/director/director5.jpg" alt="Denis Villeneuve">
+                  <div class="director-overlay"></div>
+                </div>
+                <div class="director-info">
+                  <h3 class="director-name">
+                    <a href="director.html?name=DenisVilleneuve">Denis Villeneuve</a>
+                  </h3>
+                  <div class="director-stats">
+                    <span><i class="bi bi-film"></i> 10 Films</span>
+                    <span><i class="bi bi-star-fill"></i> 4.7</span>
+                  </div>
+                  <p class="director-movies">Notable Works: Dune, Blade Runner 2049, Arrival</p>
+                  <div class="director-genres">
+                    <span class="genre-tag">Sci-Fi</span>
+                    <span class="genre-tag">Drama</span>
+                    <span class="genre-tag">Mystery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Director Card 6 -->
+          <div class="col-md-6" data-category="action" data-aos="fade-up">
+            <div class="director-card">
+              <div class="director-card-inner">
+                <div class="director-image">
+                  <img src="/director/director6.jpg" alt="Kathryn Bigelow">
+                  <div class="director-overlay"></div>
+                </div>
+                <div class="director-info">
+                  <h3 class="director-name">
+                    <a href="director.html?name=KathrynBigelow">Kathryn Bigelow</a>
+                  </h3>
+                  <div class="director-stats">
+                    <span><i class="bi bi-film"></i> 8 Films</span>
+                    <span><i class="bi bi-star-fill"></i> 4.6</span>
+                  </div>
+                  <p class="director-movies">Notable Works: The Hurt Locker, Zero Dark Thirty</p>
+                  <div class="director-genres">
+                    <span class="genre-tag">Action</span>
+                    <span class="genre-tag">War</span>
+                    <span class="genre-tag">Drama</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+    
+        // Append new directors to the container
+        directorContainer.insertAdjacentHTML("beforeend", newDirectors);
+        
+        // Refresh AOS animations for new elements
+        AOS.refresh();
+        
+        // Optional: Hide the button after showing more directors
+        // this.style.display = 'none';
+        
+        // Optional: Update button text to show loading state
+        this.innerHTML = '<span>Loading More...</span>';
+        setTimeout(() => {
+          this.innerHTML = '<span>Show More</span><i class="bi bi-arrow-down-circle"></i>';
+        }, 1000);
+      });
+    
+      // Filter functionality for directors
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterBtns.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+          
+          const filter = btn.getAttribute('data-filter');
+          const directors = document.querySelectorAll('#directorContainer [data-category]');
+          
+          directors.forEach(director => {
+            if (filter === 'all' || director.dataset.category === filter) {
+              director.style.display = '';
+              director.style.animation = 'fadeIn 0.5s ease forwards';
+            } else {
+              director.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
+    
   <!-- -----------------------------------[ for latest news section]-------------------- -->
   <script>
     document.getElementById("showMoreBtn").addEventListener("click", function () {
