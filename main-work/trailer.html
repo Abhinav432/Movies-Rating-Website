@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trailer Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link rel="stylesheet/less" type="text/css" href="style.less" /> -->
+  <script src="https://cdn.jsdelivr.net/npm/less@4.1.3"></script>
+  <style>
+    .trailer-thumb {
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .trailer-thumb.active {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    .trailer-thumb img {
+      width: 100px;
+      height: 60px;
+      object-fit: cover;
+    }
+
+    .scrollable-list {
+      max-height: 320px;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .scroll-btn {
+      background: #212529;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 6px;
+      width: 100%;
+    }
+
+    .scroll-btn:hover {
+      background: #0d6efd;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white">
+  <div class="container py-4">
+    <h2 class="mb-4">IN THEATER</h2>
+    <div class="row">
+      <!-- Left Side Video -->
+      <div class="col-lg-9 mb-3">
+        <div class="ratio ratio-16x9">
+          <iframe id="mainTrailer" src="https://www.youtube.com/embed/1Q8fG0TtVAY" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Right Side List + Buttons -->
+      <div class="col-lg-3">
+        <button class="scroll-btn mb-2" onclick="scrollList(-1)">▲</button>
+
+        <div class="d-flex flex-column gap-2 scrollable-list" id="trailerList">
+          <div class="trailer-thumb d-flex align-items-center p-2 active" onclick="changeTrailer(this, '1Q8fG0TtVAY')">
+            <img src="https://img.youtube.com/vi/1Q8fG0TtVAY/0.jpg" class="me-2" />
+            <div>
+              <strong>Wonder Woman</strong><br />
+              <small>2:30</small>
+            </div>
+          </div>
+          <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, 'XMbvcp480Y4')">
+            <img src="https://img.youtube.com/vi/XMbvcp480Y4/0.jpg" class="me-2" />
+            <div>
+              <strong>Oblivion</strong><br />
+              <small>2:37</small>
+            </div>
+          </div>
+          <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, '44LdLqgOpjo')">
+            <img src="https://img.youtube.com/vi/44LdLqgOpjo/0.jpg" class="me-2" />
+            <div>
+              <strong>Skull Island</strong><br />
+              <small>2:44</small>
+            </div>
+          </div>
+          <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, 'DekuSxJgpbY')">
+            <img src="https://img.youtube.com/vi/DekuSxJgpbY/0.jpg" class="me-2" />
+            <div>
+              <strong>Logan Interview</strong><br />
+              <small>2:43</small>
+            </div>
+          </div>
+          <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, '0WWzgGyAH6Y')">
+            <img src="https://img.youtube.com/vi/0WWzgGyAH6Y/0.jpg" class="me-2" />
+            <div>
+              <strong>Beauty & Beast</strong><br />
+              <small>2:51</small>
+            </div>
+          </div>
+        </div>
+
+        <button class="scroll-btn mt-2" onclick="scrollList(1)">▼</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function changeTrailer(element, videoId) {
+      const iframe = document.getElementById("mainTrailer");
+      iframe.src = "https://www.youtube.com/embed/" + videoId;
+
+      document.querySelectorAll(".trailer-thumb").forEach((item) => item.classList.remove("active"));
+      element.classList.add("active");
+    }
+
+    function scrollList(direction) {
+      const list = document.getElementById("trailerList");
+      const scrollAmount = 100;
+      list.scrollBy({
+        top: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+create a page not a landing page. page have 1. image and some content over the image (like a movie rating site ). 2 detail of the move like cast and discription, about ,date ,of relase,and over all rating of the movie. 3. use can easily rate the movie and see other reviews. much more you can add it in morden design    

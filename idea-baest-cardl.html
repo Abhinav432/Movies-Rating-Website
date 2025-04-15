@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSphere - Your Movie Universe</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1c2833, #2c3e50); /* Dark, cinematic gradient */
+            color: #ecf0f1;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            color: #e74c3c; /* A striking red for emphasis */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            flex-grow: 1; /* Allow grid to expand */
+        }
+
+        .movie-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .movie-info h2 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .star {
+            font-size: 1.5em;
+            color: #f39c12; /* Golden stars */
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CineSphere</h1>
+    </header>
+
+    <div class="movie-grid">
+        <div class="movie-card">
+            <img src="/asset/Oscars-movie-image/green_book.jpg" alt="Movie 1">
+            <div class="movie-info">
+                <h2>Green-book </h2>
+                
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="/asset/Oscars-movie-image/parasite_ver2.jpg" alt="Movie 2">
+            <div class="movie-info">
+                <h2>Movie Title 2</h2>
+                <div class="rating">
+                    about of the theis movie is that one family hav eaorker and the havcwe cover theirt house and rent and munder fo the family and cover they hoiuse they hise one under ground romm only thew worker are know thahat
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src="/asset/Oscars-movie-image/oppenheimer_ver3.jpg" alt="Movie 3">
+            <div class="movie-info">
+                <h2>Movie Title 3</h2>
+                <div class="rating">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src="/asset/Gemini_Generated_Image_baqwpmbaqwpmbaqw.jpeg" alt="Movie 4">
+            <div class="movie-info">
+                <h2>Movie Title 4</h2>
+                <div class="rating">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CineSphere. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.star').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                const ratingDiv = this.parentElement;
+                ratingDiv.querySelectorAll('.star').forEach(s => {
+                    if (parseInt(s.getAttribute('data-rating')) <= rating) {
+                        s.style.color = '#f39c12';
+                    } else {
+                        s.style.color = '#ecf0f1';
+                    }
+                });
+            });
+        });
+    </script>
+ <section class="container" style="display: flex; overflow-x: auto; scrollbar-width: none; padding: 1rem;">
+    <div class="row flex-nowrap  " style="margin: 0 -0.5rem;">
+      <div class="col-md-4 " style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card " style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/everything_everywhere_all_at_once_ver3.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+      </div>
+          <div class="card-body c-card " style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+            <h5 class="card-title ">Everything Everywhere All At Once</h5>
+            <!-- <p class="card-text ">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        
+      </div>      
+      <div class="col-md-4" style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/parasite_ver2.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+            <h5 class="card-title">Everything Everywhere All At Once</h5>
+            <!-- <p class="card-text ">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/dunkirk_ver2.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+            <h5 class="card-title">Everything Everywhere All At Once</h5>
+            <!-- <p class="card-text ">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/interstellar_ver2.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+            <h5 class="card-title">Everything Everywhere All At Once</h5>
+            <!-- <p class="card-text ">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+      <!-- Oppenheimer -->
+      <div class="col-md-4"  style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/oppenheimer_ver3.jpg"
+            class="card-img-top h-25 w-100"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+                 <p class="card-text ">
+              <h5 class="card-title">Oppenheimer</h5>
+            </p> 
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+      <!-- dark night -->
+      <div class="col-md-4" style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/dark_knight_rises_ver3.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+                 <p class="card-text ">
+              <h5 class="card-title">Dark Night</h5>
+            </p> 
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/everything_everywhere_all_at_once_ver3.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+            <h5 class="card-title">Everything Everywhere All At Once</h5>
+            <!-- <p class="card-text ">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/everything_everywhere_all_at_once_ver3.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+            <h5 class="card-title">Everything Everywhere All At Once</h5>
+            <!-- <p class="card-text ">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" style="flex: 0 0 ; padding: 0 0.5rem;">
+        <div class="card a-card" style="width: 18rem; overflow: hidden;">
+          <img
+            src="/asset/Oscars-movie-image/everything_everywhere_all_at_once_ver3.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body" style="background-color: #20202d; color: #fff;">
+                                              
+                <i class="bi bi-star " ></i> &nbsp; 4.5   
+                &nbsp;&nbsp;&nbsp;
+                <i class="bi bi-star " id="R101"></i>
+                <br><br>
+              
+            <h5 class="card-title">Everything Everywhere All At Once</h5>
+            <!-- <p class="card-text ">
+              Some quick example text to build on the card title and make up
+              the bulk of the card's content.
+            </p> -->
+           
+            <a href="#" class="btn bttn btn-primary">Play </a>
+            <a href="#" class="btn bttn">Add to watchlist </a>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+</body>
+</html>

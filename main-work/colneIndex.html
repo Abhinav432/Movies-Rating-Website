@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Rating</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="clone.css" />
+  
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="#">
+          <img src="/asset/logo1.png" class="rounded-top logo" alt="Logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <i class="bi bi-list text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active text-white" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#">Link</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/asset/Gemini_Generated_Image_u98jqu98jqu98jqu.jpeg" class="d-block w-100" style="height: 540px" alt="Slide 1" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-info">First slide label</h5>
+            <p>Some placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/asset/Gemini_Generated_Image_baqwpmbaqwpmbaqw.jpeg" class="d-block w-100" style="height: 540px" alt="Slide 2" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-info">Second slide label</h5>
+            <p>Some placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/asset/Oscars-movie-image/tenet.jpg" class="d-block w-100" style="height: 540px" alt="Slide 3" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Icon Buttons -->
+    <div class="icon-btn d-flex justify-content-center flex-wrap my-4">
+      <button class="btn btn-outline-primary mx-2"><i class="fa-solid fa-fire-flame-curved"></i> Trending</button>
+      <button class="btn btn-outline-primary mx-2"><i class="fa-solid fa-fire-flame-curved"></i> Action</button>
+      <button class="btn btn-outline-primary mx-2"><i class="fa-solid fa-fire-flame-curved"></i> Comedy</button>
+      <button class="btn btn-outline-primary mx-2"><i class="fa-solid fa-fire-flame-curved"></i> Anime</button>
+      <button class="btn btn-outline-primary mx-2"><i class="fa-solid fa-fire-flame-curved"></i> TV Show</button>
+      <button class="btn btn-outline-primary mx-2"><i class="fa-solid fa-fire-flame-curved"></i> Honor</button>
+      <button class="btn btn-outline-primary mx-2"><i class="fa-solid fa-fire-flame-curved"></i> Top Rating</button>
+    </div>
+
+    <!-- Movie Sections -->
+    <h3 class="text-center my-4">Oscars-Movie</h3>
+    <div class="movie-grid row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100 shadow-sm hover-effect">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book">
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="card-text">A brief description of the movie.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="text-warning">★★★★☆</span>
+              <button class="btn btn-primary">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat similar blocks for other movies -->
+    </div>
+
+    <!-- Cast Section -->
+    <h3 class="text-center my-4">Cast</h3>
+    <div class="cast-info d-flex justify-content-center flex-wrap">
+      <div class="cast-img mx-2">
+        <img src="/asset/Oscars-movie-image/argo.jpg" class="rounded-circle shadow-sm" alt="Cast">
+      </div>
+      <div class="cast-img mx-2">
+        <img src="/asset/Oscars-movie-image/green_book.jpg" class="rounded-circle shadow-sm" alt="Cast">
+      </div>
+      <div class="cast-img mx-2">
+        <img src="/asset/logo.png" class="rounded-circle shadow-sm" alt="Cast">
+      </div>
+      <div class="cast-img mx-2">
+        <img src="/asset/Oscars-movie-image/interstellar_ver2.jpg" class="rounded-circle shadow-sm" alt="Cast">
+      </div>
+    </div>
+
+    <button class="btn btn-primary d-block mx-auto my-4">Explore More</button>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 MovieRatings. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

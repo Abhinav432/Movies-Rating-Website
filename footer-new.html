@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <footer class="cinematic-footer">
+        <div class="footer-content">
+          <span>Reel reviews, real opinions. © 2025 MovieRater</span>
+          <div class="film-reel"></div>
+        </div>
+      </footer>
+      
+      <style>
+      .cinematic-footer {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+      }
+      
+      .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .film-reel {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        border-top: 3px solid #ff0000;
+        animation: spin 2s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      </style>
+      <!-- ================================================== -->
+      <footer class="credits-footer">
+        <div class="credits-roll">
+          <p>Directed by: <a href="/about">About Us</a></p>
+          <p>Produced by: <a href="/contact">Contact</a></p>
+          <p>Screenplay: <a href="/terms">Terms of Service</a></p>
+          <p>Special Effects: <a href="/social">Social Media</a></p>
+        </div>
+        <p>© 2025 MovieRater</p>
+      </footer>
+      
+      <style>
+      .credits-footer {
+        background: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        overflow: hidden;
+      }
+      
+      .credits-roll {
+        animation: scroll 10s linear infinite;
+      }
+      
+      .credits-roll p {
+        margin: 10px 0;
+      }
+      
+      .credits-roll a {
+        color: #ff4444;
+        text-decoration: none;
+      }
+      
+      .credits-roll a:hover {
+        text-decoration: underline;
+      }
+      
+      @keyframes scroll {
+        0% { transform: translateY(100%); }
+        100% { transform: translateY(-100%); }
+      }
+      </style>
+      <footer class="popcorn-footer">
+        <div class="popcorn-bucket">
+          <div class="kernel"><a href="#">Home</a></div>
+          <div class="kernel"><a href="#">Movies</a></div>
+          <div class="kernel"><a href="#">Ratings</a></div>
+          <div class="kernel"><a href="#">Contact</a></div>
+        </div>
+        <p>Grab Some Popcorn & Rate! | &copy; 2025</p>
+      </footer>
+      <style>
+        .popcorn-footer {
+  background: #ffeb3b;
+  padding: 30px;
+  text-align: center;
+  color: #d32f2f;
+}
+
+.popcorn-bucket {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.kernel {
+  background: #fff;
+  border-radius: 50%;
+  padding: 10px 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  animation: pop 1s ease infinite alternate;
+}
+
+.kernel a {
+  text-decoration: none;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+@keyframes pop {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+      </style>
+      <footer class="star-sky-footer">
+        <div class="stars">
+          <a href="#" class="star">★ Home</a>
+          <a href="#" class="star">★ Movies</a>
+          <a href="#" class="star">★ Ratings</a>
+          <a href="#" class="star">★ About</a>
+        </div>
+        <p>&copy; 2025 MovieRater | Rate the Stars</p>
+      </footer>
+      <style>
+        .star-sky-footer {
+  background: linear-gradient(to bottom, #0d1b2a, #1b263b);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 20px;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.star:hover {
+  transform: scale(1.2);
+  color: #ff4500;
+}
+      </style>
+      <footer>
+        <div class="footer-minimal">
+            <div class="footer-links">
+                <a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/privacy">Privacy</a> | <a href="/terms">Terms</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2024 MovieRatings. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+        .footer-minimal {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f0f0f0;
+        }
+    
+        .footer-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    
+        .footer-social a {
+            margin: 0 10px;
+            font-size: 20px;
+            color: #555;
+        }
+        .footer-copyright{
+            margin-top: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</body>
+</html>

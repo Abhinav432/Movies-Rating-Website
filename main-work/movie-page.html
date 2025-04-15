@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details - The Easy Reach</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #0b0f1a;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      
+      }
+        .back-imge {
+            background-image: url("/asset/jonatan-pie-h8nxGssjQXs-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+      .title span {
+        color: #ffeb3b;
+      }
+      .info span {
+        background-color: #ffffff1a;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        display: inline-block;
+      }
+      .watch-box button {
+        border: 2px solid #ffeb3b;
+        background-color: transparent;
+        color: #ffeb3b;
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .watch-box button:hover {
+        background-color: #ffeb3b;
+        color: #0b0f1a;
+        transform: scale(1.05);
+      }
+      .cast {
+        margin: 40px ;
+
+      }
+      .cast-member,
+      .related-movie {
+        background: #1c1f2e;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        width: 120px;
+        transition: transform 0.3s;
+      }
+      .cast-member:hover,
+      .related-movie:hover {
+        transform: translateY(-5px);
+      }
+      .cast-member img,
+      .related-movie img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 5px;
+      }
+      .stars input {
+        display: none;
+      }
+      .stars label {
+        color: #ccc;
+        font-size: 24px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      .stars input:checked ~ label,
+      .stars label:hover,
+      .stars label:hover ~ label {
+        color: #ffeb3b;
+        transform: scale(1.2);
+      }
+      .btn-warning {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .btn-warning:hover {
+        background-color: #e0c200;
+        transform: scale(1.05);
+      }
+      footer {
+        background-color: #1c1f2e;
+        padding: 20px;
+        text-align: center;
+        color: #bbb;
+        margin-top: 40px;
+        border-top: 1px solid #333;
+      }
+      footer h5 {
+        color: #ffeb3b;
+        margin-bottom: 10px;
+      }
+      footer a {
+        color: #bbb;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      footer a:hover {
+        color: #ffeb3b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid back-imge">
+      <div class="row 3">
+        <div class="col-md-4">
+          <img
+            src="/asset/Gemini_Generated_Image_baqwpmbaqwpmbaqw.jpeg"
+            alt="Movie Poster"
+            class="img-fluid rounded-2 m-2"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          />
+        </div>
+        <div class="col-md-8" data-aos="fade-down" data-aos-duration="1000">
+          <div class="mb-3 text-warning fw-bold fs-4">New Episodes</div>
+          <div class="title display-4 fw-bold mb-2">
+            The Easy <span>Reach</span>
+          </div>
+          <div class="info mb-3">
+            <span>PG 18</span>
+            <span>HD</span>
+            <span>Romance, Drama</span>
+            <span>📅 2021</span>
+            <span>⏱️ 128 min</span>
+          </div>
+          <p class="text-secondary mb-4 ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing eiusmod tempor.
+            There are many variations of passages of lorem ipsum available, but
+            the majority have suffered alteration in some injected humour.
+          </p>
+
+          <div
+            class="watch-box d-flex align-items-center bg-dark p-3 rounded mb-5"
+          >
+            <div class="me-auto">
+              <strong>Prime Video</strong><br />
+              Streaming Channels
+            </div>
+            <button>▶ WATCH NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------end the contiar-fluid ------------------------ -->
+
+    <div class="row">
+      <div class="col-12 p-2 text-center">
+        <div class="mb-5 mt-5 p-3 " data-aos="fade-up">
+          <h2 class="text-warning">About This Movie</h2>
+          <p class="text-secondary p-3 text-capitalize">
+
+            A young couple ventures into the scenic landscapes of Kerala only to
+            find themselves entangled in a whirlwind of romantic drama and
+            unexpected humor. The Easy Reach is a heartfelt journey exploring
+            love, tradition, and modernity.
+          </p>
+        </div>
+        
+        <!-- --- cast   ----- -->
+
+        <div class=" cast" data-aos="fade-up">
+          <h2 class="text-warning m-5"  >Cast</h2>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="cast-member">
+              <img src="/actor/e.jpeg" alt="John Doe" />
+              John Doe<br /><small>Lead Actor</small>
+            </div>
+            <div class="cast-member">
+              <img src="/actor/Gemini_Generated_Image_g9xxocg9xxocg9xx.jpeg" alt="Jane Smith" />
+              Jane Smith<br /><small>Lead Actress</small>
+            </div>
+            <div class="cast-member">
+              <img src="/actor/Gemini_Generated_Image_kwvxlskwvxlskwvx.jpeg" alt="Michael Ray" />
+              Michael Ray<br /><small>Supporting</small>
+            </div>
+            <div class="cast-member">
+              <img src="/actor/Gemini_Generated_Image_l5sjczl5sjczl5sj.jpeg" alt="Sara Lane" />
+              Sara Lane<br /><small>Supporting</small>
+            </div>
+          </div>
+        </div>
+        <!-- --- trailer  ----- -->
+        <div class="mb-5" data-aos="fade-up">
+          <h2 class="text-warning">Trailer</h2>
+          <iframe
+            width="100%"
+            height="400px"
+            src="https://www.youtube.com/embed/your-trailer-video-id"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <!-- --- rating section   ----- -->
+
+        <div class="mb-5">
+          <h2 class="text-warning">Rate This Movie</h2>
+          <div class="stars mb-2">
+            <input type="radio" id="star1" name="rating" value="1" /><label
+              for="star1"
+              >★</label
+            >
+            <input type="radio" id="star2" name="rating" value="2" /><label
+              for="star2"
+              >★</label
+            >
+            <input type="radio" id="star3" name="rating" value="3" /><label
+              for="star3"
+              >★</label
+            >
+            <input type="radio" id="star4" name="rating" value="4" /><label
+              for="star4"
+              >★</label
+            >
+            <input type="radio" id="star5" name="rating" value="5" /><label
+              for="star5"
+              >★</label
+            >
+          </div>
+          <textarea
+            class="form-control mb-2   w-50 "
+            rows="3"
+            placeholder="Leave your review..."
+          ></textarea>
+          <button class="btn btn-warning align-items-center">Submit Review</button>
+        </div>
+        <!-- --- similar section   ----- -->
+        <div class="mb-5">
+          <h2 class="text-warning">Similar Movies</h2>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/beautiful_mind.jpg" alt="Beautiful Mind" />
+              Beautiful Mind
+            </div>
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/dunkirk_ver2.jpg" alt="Dunkirk" />
+              Dunkirk
+            </div>
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/coda.jpg" alt="CODA" />
+              CODA
+            </div>
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/nomadland.jpg" alt="Nomadland" />
+              Nomadland
+            </div>
+          </div>
+        </div>
+        <!-- --- end of the similar  ----- -->
+        <div class="mb-5">
+          <h2 class="text-warning">Top Movies</h2>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/green_book.jpg" alt="Green Book" />
+              Green Book
+            </div>
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/nomadland.jpg" alt="Nomadland" />
+              Nomadland
+            </div>
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/tenet.jpg" alt="Tenet" />
+              Tenet
+            </div>
+            <div class="related-movie">
+              <img src="/asset/Oscars-movie-image/beautiful_mind.jpg" alt="Beautiful Mind" />
+              Beautiful Mind
+              
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+
+        <!-- --- end of the top  ----- -->
+          <!-- -----------end the row ------------------------ -->
+    
+
+          
+    <footer>
+      <h5>MovieRate</h5>
+      <p>© 2025 MovieRate. All rights reserved.</p>
+      <div>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
+        <a href="#">Contact Us</a>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

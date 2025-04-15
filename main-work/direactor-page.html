@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+     <title>Director Details - Christopher Nolan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Add these lines after your existing links -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+        <!-- ...existing code... -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        /* Custom Properties */
+        :root {
+            --primary-color: #6d28d9;
+            --secondary-color: #4f46e5;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --accent-color: #7c3aed;
+            --bg-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --card-border: #2d3748;
+            --transition-default: all 0.3s ease;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Poppins', sans-serif;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 15px 30px rgba(109, 40, 217, 0.2);
+        }
+        
+        /* Base Styles */
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            font-family: var(--font-secondary);
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+        }
+        
+        .text-muted {
+            color: var(--text-secondary) !important;
+        }
+        
+        /* Card Base Styles */
+        .card-base {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 15px;
+            transition: var(--transition-default);
+        }
+        
+        /* Hero Section */
+        .director-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)),
+                        url('/images/nolan-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid var(--card-border);
+        }
+        
+        .director-hero::before {
+            background: var(--bg-gradient);
+            opacity: 0.3;
+        }
+        
+        /* Stats Card */
+        .stat-card {
+            composes: card-base;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-color);
+        }
+        
+        .stat-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: var(--bg-gradient);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+        }
+        
+        .stat-card h3 {
+            font-weight: 700;
+            font-size: 2rem;
+            margin: 15px 0 10px;
+            background: var(--bg-gradient);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        /* Timeline */
+        .timeline-item {
+            composes: card-base;
+            border-left: 3px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 0 15px 15px 0;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-item h5 {
+            color: var(--accent-color);
+        }
+        
+        /* Rating Section */
+        .rating-stars i {
+            cursor: pointer;
+            transition: var(--transition-default);
+            color: var(--text-secondary);
+        }
+        
+        .rating-stars i:hover,
+        .rating-stars i.active {
+            color: #ffc107;
+            transform: scale(1.2);
+        }
+        
+        .rating-stars i:hover ~ i {
+            color: var(--text-secondary);
+        }
+        
+        /* Progress Bars */
+        .distribution-bar .progress {
+            border-radius: 50px;
+            overflow: hidden;
+            background: var(--dark-bg);
+        }
+        
+        .distribution-bar .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background: var(--bg-gradient);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            transition: var(--transition-default);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 5px;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .stat-card, 
+            .award-card, 
+            .timeline-item {
+                margin-bottom: 15px;
+            }
+            
+            .gallery-container {
+                columns: 2;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .gallery-container {
+                columns: 1;
+            }
+            
+            .btn-primary {
+                width: 100%;
+            }
+        }
+        </style>
+</head>
+<body>
+    <!-- ... existing navbar ... -->
+
+    <!-- Hero Section -->
+    <section class="director-hero">
+        <div class="container text-center">
+            <img src="/actor/Gemini_Generated_Image_l5sjczl5sjczl5sj.jpeg" alt="Christopher Nolan" 
+                 class="rounded-circle mb-4" style="width: 200px; height: 200px; object-fit: cover;">
+            <h1 class="display-4 mb-3">Christopher Nolan</h1>
+            <p class="lead">Visionary Director | Producer | Screenwriter</p>
+            <div class="mt-4">
+                <span class="badge bg-primary me-2">Action</span>
+                <span class="badge bg-primary me-2">Sci-Fi</span>
+                <span class="badge bg-primary">Thriller</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <!-- Stats Row -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-film fs-1 text-primary"></i>
+                    <h3 class="mt-2">12</h3>
+                    <p class="text-muted">Films Directed</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-trophy fs-1 text-primary"></i>
+                    <h3 class="mt-2">5</h3>
+                    <p class="text-muted">Academy Awards</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-star fs-1 text-primary"></i>
+                    <h3 class="mt-2">4.8</h3>
+                    <p class="text-muted">Average Rating</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="bi bi-cash fs-1 text-primary"></i>
+                    <h3 class="mt-2">$4.5B</h3>
+                    <p class="text-muted">Box Office</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Biography -->
+        <section class="mb-5">
+            <h2 class="mb-4">Biography</h2>
+            <p class="lead">Christopher Nolan is a British-American film director known for his distinctive style of complex, nonlinear storytelling.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>1970</h5>
+                    <p>Born in London, England</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>1998</h5>
+                    <p>Directed first feature film "Following"</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>2000</h5>
+                    <p>Breakthrough with "Memento"</p>
+                </div>
+                <!-- Add more timeline items -->
+            </div>
+        </section>
+
+        <!-- Filmography -->
+        <section class="mb-5">
+            <h2 class="mb-4">Notable Films</h2>
+            <div class="row g-4">
+                <!-- Add film cards with posters and details -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/images/inception.jpg" class="card-img-top" alt="Inception">
+                        <div class="card-body">
+                            <h5 class="card-title">Inception (2010)</h5>
+                            <p class="card-text">Rating: 8.8/10</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more film cards -->
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="mb-5">
+            <h2 class="mb-4">Awards & Recognition</h2>
+            <div class="awards-grid">
+                <!-- Add award cards -->
+                <div class="award-card">
+                    <i class="bi bi-award fs-1 text-primary"></i>
+                    <h5 class="mt-3">Academy Award</h5>
+                    <p>Best Director - Dunkirk (2017)</p>
+                </div>
+                <!-- Add more award cards -->
+            </div>
+        </section>
+        <!-- Add this section after the Awards Section and before the Gallery -->
+
+<section class="rating-section mb-5">
+    <h2 class="mb-4">Rate This Director</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="rating-card p-4" style="background: var(--card-bg); border-radius: 15px; border: 1px solid var(--card-border);">
+                <div class="current-rating text-center mb-4">
+                    <h3 class="mb-3">Average Rating</h3>
+                    <div class="display-4 mb-2" style="background: var(--bg-gradient); -webkit-background-clip: text; color: transparent;">4.8</div>
+                    <div class="stars">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-half text-warning"></i>
+                    </div>
+                    <p class="text-muted mt-2">Based on 1,248 ratings</p>
+                </div>
+                
+                <div class="your-rating">
+                    <h4 class="text-center mb-3">Your Rating</h4>
+                    <div class="rating-stars text-center mb-4">
+                        <i class="bi bi-star fs-3 mx-1" data-rating="1"></i>
+                        <i class="bi bi-star fs-3 mx-1" data-rating="2"></i>
+                        <i class="bi bi-star fs-3 mx-1" data-rating="3"></i>
+                        <i class="bi bi-star fs-3 mx-1" data-rating="4"></i>
+                        <i class="bi bi-star fs-3 mx-1" data-rating="5"></i>
+                    </div>
+                    <div class="rating-feedback">
+                        <textarea class="form-control mb-3" placeholder="Share your thoughts about this director (optional)" rows="3" style="background: var(--dark-bg); color: var(--text-primary); border-color: var(--card-border);"></textarea>
+                        <button class="btn btn-primary w-100">Submit Rating</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="rating-distribution p-4" style="background: var(--card-bg); border-radius: 15px; border: 1px solid var(--card-border);">
+                <h4 class="mb-4">Rating Distribution</h4>
+                <div class="distribution-bar mb-3 d-flex align-items-center">
+                    <span class="me-2">5</span>
+                    <div class="progress flex-grow-1" style="height: 24px; background: var(--dark-bg);">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 65%"></div>
+                    </div>
+                    <span class="ms-2">65%</span>
+                </div>
+                <!-- Repeat for other ratings -->
+                <div class="distribution-bar mb-3 d-flex align-items-center">
+                    <span class="me-2">4</span>
+                    <div class="progress flex-grow-1" style="height: 24px; background: var(--dark-bg);">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"></div>
+                    </div>
+                    <span class="ms-2">60%</span>
+                </div>
+
+                <div class="distribution-bar mb-3 d-flex align-items-center">
+                    <span class="me-2">3</span>
+                    <div class="progress flex-grow-1" style="height: 24px; background: var(--dark-bg);">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 30%"></div>
+                    </div>
+                    <span class="ms-2">30%</span>
+                </div>
+
+                <div class="distribution-bar mb-3 d-flex align-items-center">
+                    <span class="me-2">3</span>
+                    <div class="progress flex-grow-1" style="height: 24px; background: var(--dark-bg);">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%"></div>
+                    </div>
+                    <span class="ms-2">20%</span>
+                </div>
+
+                <div class="distribution-bar mb-3 d-flex align-items-center">
+                    <span class="me-2">1</span>
+                    <div class="progress flex-grow-1" style="height: 24px; background: var(--dark-bg);">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 20%"></div>
+                    </div>
+                    <span class="ms-2">20%</span>
+                </div>
+
+                <!-- Add bars for 3, 2, 1 stars -->
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Gallery -->
+        <section class="mb-5">
+            <h2 class="mb-4">Behind the Scenes</h2>
+            <div class="gallery-container">
+                <!-- Add gallery items -->
+                <div class="gallery-item">
+                    <img src="/images/behind1.jpg" alt="Behind the scenes">
+                </div>
+                <!-- Add more gallery items -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Rating functionality
+        document.querySelectorAll('.rating-stars i').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.dataset.rating;
+                document.querySelectorAll('.rating-stars i').forEach(s => {
+                    s.classList.remove('active', 'bi-star-fill');
+                    s.classList.add('bi-star');
+                });
+                
+                for(let i = 0; i < rating; i++) {
+                    document.querySelectorAll('.rating-stars i')[i].classList.remove('bi-star');
+                    document.querySelectorAll('.rating-stars i')[i].classList.add('bi-star-fill', 'active');
+                }
+            });
+    
+            star.addEventListener('mouseover', function() {
+                const rating = this.dataset.rating;
+                for(let i = 0; i < rating; i++) {
+                    document.querySelectorAll('.rating-stars i')[i].classList.remove('bi-star');
+                    document.querySelectorAll('.rating-stars i')[i].classList.add('bi-star-fill');
+                }
+            });
+    
+            star.addEventListener('mouseout', function() {
+                document.querySelectorAll('.rating-stars i:not(.active)').forEach(s => {
+                    s.classList.remove('bi-star-fill');
+                    s.classList.add('bi-star');
+                });
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

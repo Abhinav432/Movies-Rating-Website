@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Rating</title>
+  <!-- CDN link  -->
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- Style sheet link -->
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!------- aos link   -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+
+    
+</head>
+
+<body>
+  <!--========= NAV BAR ---- -->
+  <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <!-- Website Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/asset/logo1.png" class="nav-logo me-2" alt="Logo" style="height: 40px;" />
+        <span class="fw-bold text-uppercase">Movie 90</span>
+      </a>
+
+      <!-- Toggle Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Movies</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Comedy</a></li>
+              <li><a class="dropdown-item" href="#">Drama</a></li>
+              <li><a class="dropdown-item" href="#">Horror</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Search Bar -->
+        <form class="d-flex ms-lg-3 mt-3 mt-lg-0" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+
+        <!-- Login Button -->
+        <button class="btn btn-success ms-lg-3 mt-3 mt-lg-0 rounded-5" onclick="document.location='login-page.html'">
+          <i class="bi bi-person-circle me-1" ></i> Login
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- =====carousel ====== -->
+  <section>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner slide">
+        <div class="carousel-item active" data-bs-interval="2000">
+
+            
+            <img src="/asset/Gemini_Generated_Image_u98jqu98jqu98jqu.jpeg" class="d-block w-100 h" style="height: 540px"
+            alt="..."  />
+
+        
+
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-info">First slide label</h5>
+            <p>
+              Some representative placeholder content for the first slide.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/asset/Gemini_Generated_Image_baqwpmbaqwpmbaqw.jpeg" class="d-block w-100 h" style="height: 540px"
+            alt="..." />
+          <div class="carousel-caption d-none d-md-block ">
+            <h5 class="text-info ">Second slide label</h5>
+            <p>
+              Some representative placeholder content for the second slide.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/asset/Gemini_Generated_Image_7cwee47cwee47cwe.jpeg" style="height: 540px" class="d-block w-100 h"
+            alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>
+              Some representative placeholder content for the third slide.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Top movie icon section -->
+  <div class="movie_category_button_scroll primarycolor" >
+    <button data-aos="fade-right " data-aos-easing="ease-in-out" >
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <span>Trending </span>
+    </button>
+
+    <a href="#action-movie">
+      <button>
+        <i class="fa-solid fa-fire-flame-curved" ></i>
+        <span>Action </span>
+      </button>
+    </a>
+    <button>
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <span>Comdey </span>
+    </button>
+    <button>
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <span>Anime </span>
+    </button>
+    <button>
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <span>Tv show </span>
+    </button>
+    <button>
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <span>Honor </span>
+    </button>
+    <button>
+      <i class="fa-solid fa-fire-flame-curved"></i>
+      <span>Top Rating</span>
+    </button>
+  </div>
+  <!-- icon - button end  -->
+
+  <!-- =================================================================================================== -->
+  <section class="secondarycolor">
+    <span style="margin-left: 1.5rem; font-size: 50px">Oscars-Movie</span>
+
+    <div class="movie-grid col-md-6 col-lg-12" data-aos="fade-up">
+
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card movie-card-color">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" alt="Movie 1" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of an
+              African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews">1245 reviews</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card  movie-card-color">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card  movie-card-color">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card  movie-card-color">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card  movie-card-color">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card  movie-card-color">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card  movie-card-color">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ========================= Movie-card end========================================== -->
+
+  <!-- ============================= start =========================================== -->
+  <section class="primarycolor" id="action-movie">
+    <span>Action Movies</span>
+    <div class="movie-grid col-md-6 col-lg-12">
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              hgg nhh  uhjgy ff jgubj ug hv bgyg 
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================== end ===================================== -->
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/green_book.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">link k</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classi.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews text-muted"> 1245 reviews </span>
+            </div>
+            <div class="d-flex gap-1">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50" onclick="document.location=`movie-page.html`">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================== end ===================================== -->
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/dark_knight_rises_ver3.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews">1245 reviews</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================== end ===================================== -->
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/dark_knight_rises_ver3.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews">1245 reviews</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================== end ===================================== -->
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/dark_knight_rises_ver3.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted ">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews">1245 reviews</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================== end ===================================== -->
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/dark_knight_rises_ver3.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted ">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews">1245 reviews</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ==================================== end ===================================== -->
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/dark_knight_rises_ver3.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted ">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews">1245 reviews</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="movie-card">
+          <img src="/asset/Oscars-movie-image/dark_knight_rises_ver3.jpg" class="card-img-top" alt="Green Book" />
+          <div class="card-body">
+            <h5 class="card-title">Green-book</h5>
+            <p class="text-muted">Genre: Drama | Year: 2018</p>
+            <p class="card-text text-muted ">
+              A working-class Italian-American bouncer becomes the driver of
+              an African-American classical pianist.
+            </p>
+            <div class="rating-info">
+              <span class="rating">⭐ 4.8/5</span>
+              <span class="reviews">1245 reviews</span>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-light w-50">Trailer</button>
+              <button class="btn btn-dark w-50">Watchlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= end =========================================== -->
+
+  <!-- ================== cast-info  ============================= -->
+
+  <section class="cast-section py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Cast & Crew</h2>
+      <div class="row g-4" id="castContainer">
+        <!-- Cast Member 1 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/e.jpeg" alt="John Doe" class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">John Doe</h5>
+            <p class="cast-role text-muted small">Lead Actor</p>
+          </div>
+        </div>
+        <!-- Cast Member 2 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_g9xxocg9xxocg9xx.jpeg" alt="Jane Smith" class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">Jane Smith</h5>
+            <p class="cast-role text-muted small">Lead Actress</p>
+          </div>
+        </div>
+        <!-- Cast Member 3 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_kwvxlskwvxlskwvx.jpeg" alt="Michael Ray" class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">Michael Ray</h5>
+            <p class="cast-role text-muted small">Supporting Actor</p>
+          </div>
+        </div>
+        <!-- Cast Member 4 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_l5sjczl5sjczl5sj.jpeg" alt="Sara Lane" class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">Sara Lane</h5>
+            <p class="cast-role text-muted small">Supporting Actress</p>
+          </div>
+        </div>
+      </div>
+      <!-- Show More Button -->
+      <div class="text-center mt-4">
+        <button class="btn btn-primary" id="showMoreCastBtn">Show More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================== -->
+
+  <!-- --------------[Trailer ssection] -->
+
+  <section class="bg-dark text-white">
+    <div class="container py-4">
+      <h2 class="mb-4">IN THEATER</h2>
+      <div class="row">
+        <!-- Left Side Video -->
+        <div class="col-lg-9 mb-3">
+          <div class="ratio ratio-16x9">
+            <iframe id="mainTrailer" src="https://www.youtube.com/embed/1Q8fG0TtVAY" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Right Side List + Buttons -->
+        <div class="col-lg-3">
+          <button class="scroll-btn mb-2" onclick="scrollList(-1)">▲</button>
+
+          <div class="d-flex flex-column gap-2 scrollable-list" id="trailerList">
+            <div class="trailer-thumb d-flex align-items-center p-2 active"
+              onclick="changeTrailer(this, '1Q8fG0TtVAY')">
+              <img src="https://img.youtube.com/vi/1Q8fG0TtVAY/0.jpg" class="me-2" />
+              <div>
+                <strong>Wonder Woman</strong><br />
+                <small>2:30</small>
+              </div>
+            </div>
+            <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, 'XMbvcp480Y4')">
+              <img src="https://img.youtube.com/vi/XMbvcp480Y4/0.jpg" class="me-2" />
+              <div>
+                <strong>Oblivion</strong><br />
+                <small>2:37</small>
+              </div>
+            </div>
+            <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, '44LdLqgOpjo')">
+              <img src="https://img.youtube.com/vi/44LdLqgOpjo/0.jpg" class="me-2" />
+              <div>
+                <strong>Skull Island</strong><br />
+                <small>2:44</small>
+              </div>
+            </div>
+            <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, 'DekuSxJgpbY')">
+              <img src="https://img.youtube.com/vi/DekuSxJgpbY/0.jpg" class="me-2" />
+              <div>
+                <strong>Logan Interview</strong><br />
+                <small>2:43</small>
+              </div>
+            </div>
+            <div class="trailer-thumb d-flex align-items-center p-2" onclick="changeTrailer(this, '0WWzgGyAH6Y')">
+              <img src="https://img.youtube.com/vi/0WWzgGyAH6Y/0.jpg" class="me-2" />
+              <div>
+                <strong>Beauty & Beast</strong><br />
+                <small>2:51</small>
+              </div>
+            </div>
+          </div>
+
+          <button class="scroll-btn mt-2" onclick="scrollList(1)">▼</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- --------- [Director Section] ------------------------------------ -->
+
+<section class="director-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">
+      <span class="gradient-text">Top Directors</span>
+    </h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons text-center mb-4" data-aos="fade-up">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="action">Action</button>
+      <button class="filter-btn" data-filter="drama">Drama</button>
+      <button class="filter-btn" data-filter="scifi">Sci-Fi</button>
+    </div>
+
+    <div class="row g-4" id="directorContainer">
+      <!-- Director Card 1 -->
+      <div class="col-md-6" data-category="scifi" data-aos="fade-up">
+        <div class="director-card">
+          <div class="director-card-inner">
+            <div class="director-image">
+              <img src="/asset/actor/Christopher Nolan.png" alt="Christopher Nolan">
+              <div class="director-overlay"></div>
+            </div>
+            <div class="director-info">
+              <h3 class="director-name">
+                <a href="/main-work/direactor-page.html">Christopher Nolan</a>
+              </h3>
+              <div class="director-stats">
+                <span><i class="bi bi-film"></i> 12 Films</span>
+                <span><i class="bi bi-star-fill"></i> 4.9</span>
+              </div>
+              <p class="director-movies">Notable Works: Inception, Interstellar, The Dark Knight</p>
+              <div class="director-genres">
+                <span class="genre-tag">Sci-Fi</span>
+                <span class="genre-tag">Action</span>
+                <span class="genre-tag">Thriller</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Director Card 2 -->
+      <div class="col-md-6" data-category="drama" data-aos="fade-up" data-aos-delay="100">
+        <div class="director-card">
+          <div class="director-card-inner">
+            <div class="director-image">
+              <img src="/director/Gemini_Generated_Image_director2.jpeg" alt="Greta Gerwig">
+              <div class="director-overlay"></div>
+            </div>
+            <div class="director-info">
+              <h3 class="director-name">
+                <a href="director.html?name=GretaGerwig">Greta Gerwig</a>
+              </h3>
+              <div class="director-stats">
+                <span><i class="bi bi-film"></i> 8 Films</span>
+                <span><i class="bi bi-star-fill"></i> 4.7</span>
+              </div>
+              <p class="director-movies">Notable Works: Little Women, Lady Bird, Barbie</p>
+              <div class="director-genres">
+                <span class="genre-tag">Drama</span>
+                <span class="genre-tag">Comedy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Show More Button -->
+    <div class="text-center mt-5" data-aos="fade-up">
+      <button class="show-more-btn" id="showMoreDirectorsBtn">
+        <span>Show More</span>
+        <i class="bi bi-arrow-down-circle"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- --------- [latest news section ]------------------------------------ -->
+
+  <section class="latest-news-section py-5 bg-light">
+    <div class="container">
+      <h2 class="news-title mb-4 text-center fw-bold">Latest News</h2>
+      <div class="row g-4" id="newsContainer">
+        <!-- Initial News Cards -->
+        <div class="col-12">
+          <div class="news-card d-flex align-items-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_8xbmf78xbmf78xbm.jpeg" class="news-image rounded" alt="News Image">
+            <div class="news-content ms-3">
+              <h5 class="news-title">
+                <a href="#" class="text-dark text-decoration-none">Brie Larson to play first female White House candidate Victoria Woodhull in Amazon film</a>
+              </h5>
+              <p class="text-muted small mb-2">13 hours ago</p>
+              <p class="news-description">
+                Exclusive: <a href="#" class="text-primary">Amazon Studios</a> has acquired Victoria Woodhull, with Oscar-winning Room star
+                <a href="#" class="text-primary">Brie Larson</a> poised to produce and play the first female candidate for the presidency of the United States.
+              </p>
+            </div>
+          </div>
+        </div>
+          <!-- News Card 2 -->
+      <div class="col-12">
+        <div class="news-card d-flex align-items-center shadow-sm p-3 bg-white rounded">
+          <img src="/actor/Gemini_Generated_Image_8xbmf78xbmf78xbm.jpeg" class="news-image rounded" alt="News Image">
+          <div class="news-content ms-3">
+            <h5 class="news-title">
+              <a href="#" class="text-dark text-decoration-none">Amazon Studios secures rights to Victoria Woodhull story</a>
+            </h5>
+            <p class="text-muted small mb-2">1 day ago</p>
+            <p class="news-description">
+              Amazon Studios has acquired the rights to the story of Victoria Woodhull, with <a href="#" class="text-primary">Brie Larson</a> set to star and produce.
+            </p>
+          </div>
+        </div>
+      </div>
+            <!-- News Card 3 -->
+            <div class="col-12">
+              <div class="news-card d-flex align-items-center shadow-sm p-3 bg-white rounded">
+                <img src="/actor/Gemini_Generated_Image_8xbmf78xbmf78xbm.jpeg" class="news-image rounded" alt="News Image">
+                <div class="news-content ms-3">
+                  <h5 class="news-title">
+                    <a href="#" class="text-dark text-decoration-none">Victoria Woodhull's story comes to life on Amazon</a>
+                  </h5>
+                  <p class="text-muted small mb-2">2 days ago</p>
+                  <p class="news-description">
+                    The inspiring story of Victoria Woodhull, the first female presidential candidate, will be brought to life by <a href="#" class="text-primary">Amazon Studios</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+        <!-- Add more initial cards here if needed -->
+      </div>
+      <!-- Show More Button -->
+      <div class="text-center mt-4">
+        <button class="btn btn-primary" id="showMoreBtn">Show More</button>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ----------------{ FOOTER SECTION }------------------------------- -->
+  <footer class="footer border-top">
+    <div class="container " data-aos="fade-up">
+      <div class="row gy-4">
+        <div class="col-md-3">
+          <div class="logo">MOVIE 90</div>
+          <p class="mt-3 mb-1">5th DDI St, Manhattan</p>
+          <p>HIMACHAL PRADESH, (HP) 10001</p>
+          <p class="mt-2">Call us: <strong>(+91) 83528 63833</strong></p>
+        </div>
+
+        <div class="col-md-2">
+          <h6 class="fw-bold mb-3">Resources</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blockbuster</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h6 class="fw-bold mb-3">Legal</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2">
+          <h6 class="fw-bold mb-3">Account</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Watchlist</a></li>
+            <li><a href="#">Collections</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Newsletter</h6>
+          <p>Subscribe to our newsletter system now to get latest news from us.</p>
+          <form class="d-flex mb-2">
+            <input type="email" class="form-control me-2" placeholder="Enter your email...">
+            <button class="btn btn-outline-light" type="submit">
+              <i class="bi bi-envelope"></i>
+            </button>
+          </form>
+          <div class="subscribe-btn">SUBSCRIBE NOW ></div>
+        </div>
+      </div>
+
+      <div class="text-center bottom-text mt-4">
+        &copy; 2025 Blockbuster. All Rights Reserved. Designed by leehari. <a href="#" class="ms-2">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons (Optional for envelope icon) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- --------------[animation script ] -->
+  <script>
+    AOS.init({
+      duration: 2000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+      anchorPlacement: "top-bottom",
+
+    });
+  </script>
+  <!-- ---------------------[cast javascript for  show more ]-------------------- -->
+
+  <script>
+    document.getElementById("showMoreCastBtn").addEventListener("click", function () {
+      const castContainer = document.getElementById("castContainer");
+  
+      // Example of additional cast members
+      const newCastMembers = `
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_new1.jpeg" alt="Chris Evans" class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">Chris Evans</h5>
+            <p class="cast-role text-muted small">Supporting Actor</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_new2.jpeg" alt="Scarlett Johansson" class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">Scarlett Johansson</h5>
+            <p class="cast-role text-muted small">Lead Actress</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_new3.jpeg" alt="Robert Downey Jr." class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">Robert Downey Jr.</h5>
+            <p class="cast-role text-muted small">Lead Actor</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="cast-card text-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_new4.jpeg" alt="Mark Ruffalo" class="cast-image rounded-circle mb-3">
+            <h5 class="cast-name mb-1">Mark Ruffalo</h5>
+            <p class="cast-role text-muted small">Supporting Actor</p>
+          </div>
+        </div>
+      `;
+  
+      // Append new cast members to the container
+      castContainer.insertAdjacentHTML("beforeend", newCastMembers);
+    });
+  </script>
+
+  <!-- -------------------------[trailer script (change the movie trailer ] ------------------- -->
+
+  <script>
+    function changeTrailer(element, videoId) {
+      const iframe = document.getElementById("mainTrailer");
+      iframe.src = "https://www.youtube.com/embed/" + videoId;
+
+      document.querySelectorAll(".trailer-thumb").forEach((item) => item.classList.remove("active"));
+      element.classList.add("active");
+    }
+
+    function scrollList(direction) {
+      const list = document.getElementById("trailerList");
+      const scrollAmount = 100;
+      list.scrollBy({
+        top: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+  <!-- -----------------------------------[ for latest news section]-------------------- -->
+  <script>
+    document.getElementById("showMoreBtn").addEventListener("click", function () {
+      const newsContainer = document.getElementById("newsContainer");
+  
+      // Example of additional news cards
+      const newCards = `
+        <div class="col-12">
+          <div class="news-card d-flex align-items-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_8xbmf78xbmf78xbm.jpeg" class="news-image rounded" alt="News Image">
+            <div class="news-content ms-3">
+              <h5 class="news-title">
+                <a href="#" class="text-dark text-decoration-none">Amazon Studios secures rights to Victoria Woodhull story</a>
+              </h5>
+              <p class="text-muted small mb-2">1 day ago</p>
+              <p class="news-description">
+                Amazon Studios has acquired the rights to the story of Victoria Woodhull, with <a href="#" class="text-primary">Brie Larson</a> set to star and produce.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="news-card d-flex align-items-center shadow-sm p-3 bg-white rounded">
+            <img src="/actor/Gemini_Generated_Image_8xbmf78xbmf78xbm.jpeg" class="news-image rounded" alt="News Image">
+            <div class="news-content ms-3">
+              <h5 class="news-title">
+                <a href="#" class="text-dark text-decoration-none">Victoria Woodhull's story comes to life on Amazon</a>
+              </h5>
+              <p class="text-muted small mb-2">2 days ago</p>
+              <p class="news-description">
+                The inspiring story of Victoria Woodhull, the first female presidential candidate, will be brought to life by <a href="#" class="text-primary">Amazon Studios</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+  
+      // Append new cards to the container
+      newsContainer.insertAdjacentHTML("beforeend", newCards);
+    });
+  </script>
+
+  
+
+
+</body>
+
+</html>

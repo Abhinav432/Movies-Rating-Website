@@ -1,0 +1,44 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #343a40;
+}
+
+.icon-btn button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icon-btn button:hover {
+  transform: scale(1.1);
+  background-color: #007bff;
+  color: #fff;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cast-img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cast-img img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
